@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ООО СК «Строим Для Вас» - Винтовые сваи</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f7f7f7; color: #333; margin: 0; padding: 0; }
+    header { background: #fc8b68; color: rgb(255, 255, 255); padding: 10px 20px; display: flex; align-items: center; gap: 15px; position: sticky; top: 0; z-index: 100; }
+    header img.logo { height: 50px; width: 50px; object-fit: contain; }
+    header h1 { font-size: 1.5rem; margin: 0; flex-grow: 1; }
+    nav a { color: #f9f5f4; margin-left: 15px; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: #ff5722; text-decoration: underline; }
+    main { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
+    section { background: white; padding: 20px; margin-bottom: 25px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h2 { color: #ff5722; margin-top: 0; border-bottom: 2px solid #ff7043; padding-bottom: 5px; }
+    .intro-block { display: flex; justify-content: space-between; align-items: start; background: #fff; padding: 20px 30px; margin: 20px auto; max-width: 1100px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); gap: 20px; flex-wrap: wrap; }
+    .intro-left { flex: 1 1 60%; min-width: 280px; }
+    .intro-left h2 { margin-top: 0; font-weight: 700; font-size: 1.5rem; color: #333; }
+    .intro-left p { color: #555; font-size: 1rem; line-height: 1.5; margin: 10px 0 20px 0; }
+    .button-group { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 10px 20px; font-weight: 600; border-radius: 8px; text-decoration: none; color: white; transition: background-color 0.3s; }
+    .call-btn { background: #ff7043; }
+    .call-btn:hover { background: #ff5722; }
+    .orange-btn { background: #ff7043; }
+    .orange-btn:hover { background: #f4511e; }
+    .intro-right { flex: 1 1 35%; min-width: 200px; font-size: 0.95rem; color: #333; line-height: 1.4; }
+    .intro-right strong { font-weight: 700; }
+    .intro-right a { color: #0288d1; text-decoration: none; }
+    .intro-right a:hover { text-decoration: underline; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .feature { padding: 15px; background: #ffccbc; border-left: 6px solid #d84315; border-radius: 4px; text-align: center; }
+    .feature h3 { color: #bf360c; margin-top: 0; }
+    .pinterest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+    .card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 15px; text-align: center; transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { color: #ff5722; margin-top: 0; }
+    table.price-table { border-collapse: collapse; margin: 10px 15px 15px 0; width: 140px; float: left; box-shadow: 0 0 6px rgba(0,0,0,0.08); border-radius: 4px; overflow: hidden; font-size: 0.9rem; }
+    table.price-table caption { background: #ff7043; color: white; font-weight: bold; padding: 8px; font-size: 1rem; text-align: center; }
+    table.price-table th, table.price-table td { border: 1px solid #ddd; padding: 6px 8px; text-align: center; }
+    table.price-table th { background: #fbe9e7; font-weight: 600; }
+    table.price-table td.price { color: #d84315; font-weight: 700; }
+    .price-wrapper::after { content: ""; display: table; clear: both; }
+    .highlight { background: #ffccbc; border-left: 6px solid #d84315; padding: 15px 20px; margin: 15px 0; font-weight: 700; font-size: 1.2rem; color: #bf360c; border-radius: 4px; text-align: center; }
+    .gallery { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
+    .gallery img { border-radius: 5px; box-shadow: 0 1px 5px rgba(0,0,0,0.15); width: 32%; height: auto; object-fit: cover; }
+    .contacts { display: flex; flex-wrap: wrap; gap: 30px; font-size: 0.95rem; }
+    .
+    contacts div { flex: 1 1 250px; min-width: 250px; }
+    .contacts a { color: #0288d1; text-decoration: none; font-weight: 600; }
+    .contacts a:hover { text-decoration: underline; }
+    footer { background: #455a64; color: white; text-align: center; padding: 15px 20px; font-size: 0.9rem; margin-top: 40px; }
+    @media (max-width: 700px) {
+      .intro-block { flex-direction: column; padding: 15px 20px; }
+      .intro-left, .intro-right { flex: 1 1 100%; min-width: auto; }
+      .button-group { justify-content: flex-start; }
+      .gallery img { width: 100%; }
+      .contacts { flex-direction: column; }
+      .price-wrapper { text-align: center; }
+      table.price-table { float: none; margin: 10px auto; width: 80%; }
+      nav { display: flex; flex-wrap: wrap; }
+      nav a { margin: 5px 10px 0 0; }
+      .pinterest-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Логотип СК Строим Для Вас" class="logo">
+    <h1>ООО СК «Строим Для Вас»</h1>
+    <nav>
+      <a href="#about">Наши преимущества</a>
+      <a href="#products">Наша продукция</a>
+      <a href="#services">Услуги</a>
+      <a href="#work">Работы</a>
+      <a href="#prices">Стоимость</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+  <main>
+    <section class="intro-block">
+      <div class="intro-left">
+        <h2>Строительная компания ООО СК «Строим Для Вас»</h2>
+        <p>Это 14 лет успешной работы по монтажу винтовых свай в Нижегородской области. Надёжность и качество — наши главные приоритеты. Доверьте строительство профессионалам с богатым опытом!</p>
+        <div class="button-group">
+          <a href="tel:+79049209453" class="btn call-btn">Позвонить: +7 904 920-94-53</a>
+          <a href="https://t.me/Viktor_svai" target="_blank" class="btn orange-btn">Telegram</a>
+          <a href="https://vk.com/id828053163" target="_blank" class="btn orange-btn">ВКонтакте</a>
+        </div>
+      </div>
+      <div class="intro-right">
+        <p><strong>Владелец:</strong> Костюнин Виктор Николаевич</p>
+        <p><strong>Часы работы:</strong> ежедневно с 8:00 до 22:00</p>
+        <p><strong>Email:</strong> <a href="mailto:kostyunin_v@bk.ru">kostyunin_v@bk.ru</a></p>
+      </div>
+    </section>
+    <section id="about" class="card">
+      <h2>Наши преимущества</h2>
+      <div class="grid-3">
+        <div class="feature">
+          <h3>Опыт 14 лет</h3>
+          <p>Работаем в Нижегородской области — сотни успешно смонтированных фундаментов.</p>
+        </div>
+        <div class="feature">
+          <h3>Гидравлическая установка</h3>
+          <p>Современная техника для аккуратного и быстрого монтажа.</p>
+        </div>
+        <div class="feature">
+          <h3>Гарантия и договор</h3>
+          <p>Работаем по договору — даём гарантию на выполненные работы.</p>
+        </div>
+      </div>
+    </section>
+    <section id="products">
+      <h2>Наша продукция</h2>
+      <div class="pinterest-grid">
+        <div class="card"><h3>Винтовая свая 57 мм</h3><p>Надёжный выбор для лёгких конструкций.</p></div>
+        <div class="card"><h3>Винтовая свая 76 мм</h3><p>Идеально для средних нагрузок.</p></div>
+        <div class="card"><h3>Винтовая свая 89 мм</h3><p>Для тяжёлых фундаментов.</p></div>
+        <div class="card"><h3>Винтовая свая 108 мм</h3><p>Максимальная прочность и устойчивость.</p></div>
+      </div>
+    </section>
+    <section id="services">
+      <h2>Наши услуги</h2>
+      <div class="pinterest-grid">
+        <div class="card"><h3>Бесплатный расчёт свайного поля</h3><p>Профессиональный анализ для вашего проекта.</p></div>
+        <div class="card"><h3>Производство винтовых свай</h3><p>Изготовление по индивидуальным размерам.</p></div>
+        <div class="card"><h3>Продажа с доставкой</h3><p>Удобная доставка прямо на объект.</p></div>
+        <div class="card"><h3>Монтаж винтовых свай</h3><p>Быстрый и качественный монтаж.</p></div>
+        <div class="card"><h3>Обвязка брусом, швеллером, уголком</h3><p>Полная подготовка фундамента.</p></div>
+        <div class="card"><h3>Реконструкция старого фундамента</h3><p>Восстановление и укрепление.</p></div>
+        <div class="card"><h3>Подъём домов на новый фундамент</h3><p>Перемещение и установка на сваи.</p></div>
+      </div>
+    </section>
+    <section id="font-family">
+      <h2>Перечень выполняемых работ при монтаже винтовых свай</h2>
+      <div class="pinterest-grid">
+        <div class="card"><h3>Разметка свайного поля</h3><p>Точная подготовка участка.</p></div>
+        <div class="card"><h3>Монтаж винтовых свай</h3><p>Установка с использованием техники.</p></div>
+        <div class="card"><h3>Подрезка под лазерный уровень</h3><p>Выравнивание для идеальной поверхности.</p></div>
+        <div class="card"><h3>Бетонирование канала ствола</h3><p>Укрепление для долговечности.</p></div>
+        <div class="card"><h3>Приварка оголовка</h3><p>Фиксация верхней части.</p></div>
+        <div class="card"><h3>Уборка территории</h3><p>Чистота после работ.</p></div>
+      </div>
+    </section>
+    <section id="conditions">
+      <h2>Условия предоставления услуг</h2>
+      <p><strong>1. Обязательно договор на предоставление услуг.</strong></p>
+      <p><strong>2. Гарантия — это наше надежное качество на выполненную работу.</strong></p>
+    </section>
+    <section id="prices">
+      <h2>Стоимость винтовых свай с оголовком</h2>
+      <div class="price-wrapper">
+        <table class="price-table">
+          <caption>Диаметр 57 мм</caption>
+          <thead><tr><th>Длина</th><th>Цена</th></tr></thead>
+          <tbody>
+            <tr><td>1,5 м</td><td class="price">1500 ₽</td></tr>
+            <tr><td>2 м</td><td class="price">1650 ₽</td></tr>
+            <tr><td>2,5 м</td><td class="price">1800 ₽</td></tr>
+            <tr><td>3 м</td><td class="price">1950 ₽</td></tr>
+          </tbody>
+        </table>
+        <table class="price-table">
+          <caption>Диаметр 76 мм</caption>
+          <thead><tr><th>Длина</th><th>Цена</th></tr></thead>
+          <tbody>
+            <tr><td>1,5 м</td><td class="price">1700 ₽</td></tr>
+            <tr><td>2 м</td><td class="price">1900 ₽</td></tr>
+            <tr><td>2,5 м</td><td class="price">2100 ₽</td></tr>
+            <tr><td>3 м</td><td class="price">2300 ₽</td></tr>
+          </tbody>
+        </table>
+        <table class="price-table">
+          <caption>Диаметр 89 мм</caption>
+          <thead><tr><th>Длина</th><th>Цена</th></tr></thead>
+          <tbody>
+            <tr><td>2 м</td><td class="price">2100 ₽</td></tr>
+            <tr><td>2,5 м</td><td class="price">2300 ₽</td></tr>
+            <tr><td>3 м</td><td class="price">2500 ₽</td></tr>
+          </tbody>
+        </table>
+        <table class="price-table">
+          <caption>Диаметр 108 мм</caption>
+          <thead><tr><th>Длина</th><th>Цена</th></tr></thead>
+          <tbody>
+            <tr><td>2 м</td><td class="price">2500 ₽</td></tr>
+            <tr><td>2,5 м</td><td class="price">2800 ₽</td></tr>
+            <tr><td>3 м</td><td class="price">3100 ₽</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight">Винтовые сваи монтируем под забор, под подпорные стены, под дома, под пристрои, под мосты. Занимаемся подъёмом домов на новый свайно-винтовой фундамент.</div>
+      <section id="installation-price">
+        <h3>Монтаж винтовых свай</h3>
+        <p>Монтаж винтовых свай производим гидравлической установкой.</p>
+        <p>Цена за монтаж зависит от:</p>
+        <ul><li>Диаметра и длины сваи</li><li>Рельефа свайного поля</li><li>Грунта</li></ul>
+        <p>Цена за установку в пределах <strong>1100-1600 рублей за штуку</strong>.</p>
+      </section>
+    </section>
+    <section id="quality">
+      <h2>Качество и гарантия</h2>
+      <p>Мы используем современное оборудование и технологии для монтажа свай. Гарантируем высокое качество выполнения всех работ.</p>
+      <p>Наша команда профессионалов постоянно повышает квалификацию, чтобы обеспечить надежность и долговечность фундамента.</p>
+      <p>Заключаем официальные договора, чтобы защитить интересы наших клиентов.</p>
+      <p>Гарантия на работы подтверждается многолетним успешным опытом и отзывами клиентов.</p>
+      <p>С нами ваш проект будет надежным и долговечным!
+        <section id="work">
+  <h2>Фото наших работ</h2>
+  <div class="gallery">
+    <img src="photo1.jpg" alt="Свайно-винтовой фундамент" title="Свайно-винтовой фундамент" />
+    <img src="photo2.jpg" alt="Обвязка брусом" title="Обвязка брусом" />
+    <img src="photo3.jpg" alt="Свайно-винтовой фундамент под каркасный дом" title="Свайно-винтовой фундамент под каркасный дом" />
+  </div>
+</section>
+<section id="work">
+  <h2></h2>
+  <div class="gallery">
+    <img src="photo4.jpg" alt="Свайно-винтовой фундамент" title="Свайно-винтовой фундамент" />
+    <img src="photo5.jpg" alt="Обвязка уголком" title="Обвязка уголком" />
+    <img src="photo6.jpg" alt="Подъём дома" title="Подъём дома" />
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Связаться с нами</h2>
+  <div class="contacts">
+    <div>
+      <strong>Название организации:</strong> ООО СК «Строим Для Вас»<br />
+      <strong>Владелец:</strong> Костюнин Виктор Николаевич<br />
+      <strong>Адрес:</strong> г. Нижний Новгород, ул. Менделеева 15 А<br />
+      <strong>Часы работы:</strong> ежедневно с 8:00 до 22:00
+    </div>
+    <div>
+      <strong>Телефон:</strong><br />
+      <a href="tel:+79049209453">8 (904) 920-94-53</a><br />
+      <a href="tel:+89308017453">8 (930) 801-74-54</a><br />
+      <strong>Email:</strong><br />
+      <a href="mailto:kostyunin_v@vk.ru">kostyunin_v@bk.ru</a><br />
+      <strong>Телеграм:</strong><br />
+      <a href="https://t.me/Viktor_svai" target="_blank">@Viktor_svai</a><br />
+      <strong>ВКонтакте:</strong><br />
+      <a href="https://vk.com/id828053163" target="_blank">https://vk.com/id828053163</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2025 ООО СК «Строим Для Вас». Все права защищены.
+</footer>
+</body>
+</html>
